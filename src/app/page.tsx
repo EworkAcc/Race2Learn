@@ -1,103 +1,161 @@
-import Image from "next/image";
+import React from 'react';
+import { Lightbulb, Users, BookOpen, Target, Play } from 'lucide-react';
+import NavBar from '../components/NavBar';
+import Link from 'next/link';
+import CustFooter from '@/components/Footer';
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      <NavBar />
+      <div 
+        className="relative h-screen bg-cover bg-left bg-no-repeat h-screen w-full bg-[url('../../public/Chasis.jpg')]"
+      >
+        <div className="absolute inset-0 bg-opacity-40"></div>
+        <div className="relative z-10 flex items-center justify-center h-full px-4">
+          <div className="text-center max-w-4xl">
+            <p className="text-xl md:text-2xl text-black text-extrabold mb-8 max-w-2xl mt-[500px] mr-[00px]">
+              A Nonprofit That Gets Kids Excited About Math and Science
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-100 hover:text-[#a43a3a] transition-all duration-300 transform hover:scale-105">
+                Explore
+              </button>
+              <button className="border-2 border-black text-black px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#a43a3a] hover:border-white transition-all duration-300 transform hover:scale-105">
+                Donate
+              </button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <div className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center text-[#a43a3a] mb-16">VALUES</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center bg-white p-8 rounded-2xl shadow-lg">
+              <div className="w-16 h-16 bg-[#a43a3a] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Lightbulb className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#a43a3a] mb-4">Wisdom</h3>
+              <p className="text-gray-600">
+                Teaching kids learning and analytical continuous thinking
+              </p>
+            </div>
+            <div className="text-center bg-white p-8 rounded-2xl shadow-lg">
+              <div className="w-16 h-16 bg-[#a43a3a] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#a43a3a] mb-4">Understanding</h3>
+              <p className="text-gray-600">
+                Through listening and interactive comprehension and doing
+              </p>
+            </div>
+            <div className="text-center bg-white p-8 rounded-2xl shadow-lg">
+              <div className="w-16 h-16 bg-[#a43a3a] rounded-full flex items-center justify-center mx-auto mb-6">
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#a43a3a] mb-4">KNOWLEDGE</h3>
+              <p className="text-gray-600">
+                Embracing a general thorough experience, including writing
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-20 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="/tractor.png" 
+                alt="RC Car Project" 
+                className="rounded-2xl shadow-lg h-80 w-auto object-contain"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-[#a43a3a] mb-6">RC Projects</h2>
+              <p className="text-gray-600 mb-6">UPCOMING</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-700">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Customizable rewards campaigns
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Zero annual fees on student cards
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Advanced spending features with machine learning
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Exclusive savings discounts and offers
+                </li>
+              </ul>
+              <Link href="/projects">
+                <button className="bg-[#a43a3a] text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-all duration-300">
+                  Explore Projects
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-[#a43a3a] mb-6">Racing2learn YouTube</h2>
+              <p className="text-gray-600 mb-6">What You'll Find on the Racing2Learn YouTube Channel</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-700">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Hands-on RC action
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Event highlights
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  STEM in motion
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Tutorials & Reviews
+                </li>
+              </ul>
+              <Link href="https://www.youtube.com/c/Racing2Learn">
+                <button className="bg-[#a43a3a] text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-all duration-300 flex items-center gap-2">
+                  <Play className="w-5 h-5" />
+                  YouTube
+                </button>
+              </Link>
+            </div>
+            <div className="flex justify-center">
+              <div className="w-80 h-60 bg-gray-200 rounded-2xl flex items-center justify-center shadow-lg">
+                <div className="text-center">
+                  <Link href="https://www.youtube.com/c/Racing2Learn">
+                    <div className="text-6xl font-bold text-red-600 mb-2">YouTube</div>
+                    <div className="w-20 h-14 bg-red-600 rounded mx-auto flex items-center justify-center">
+                      <Play className="w-8 h-8 text-white fill-white" />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <CustFooter />
+
     </div>
   );
-}
+};
+
+export default HomePage;
