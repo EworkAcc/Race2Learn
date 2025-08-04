@@ -14,7 +14,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Projects', href: '/projects' },
-    { name: 'YouTube', href: '/youtube' },
+    { name: 'YouTube', href: 'https://www.youtube.com/c/Racing2Learn' },
     { name: 'About Us', href: '/about' },
   ];
 
