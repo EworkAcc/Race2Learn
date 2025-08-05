@@ -16,8 +16,8 @@ const DonatePage = () => {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
-                <div className="flex items-center justify-center mb-6">
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100 shadow-lg mr-4 flex items-center justify-center">
+                <div className="flex items-center justify-center mb-6 mt-4">
+                    <div className="w-16 h-16 mb-1 rounded-full overflow-hidden bg-gray-100 shadow-lg mr-4 flex items-center justify-center">
                         <img 
                         src="/PaypalLogo.png" 
                         alt="PayPal Logo" 
@@ -135,11 +135,8 @@ const DonatePage = () => {
             <p className="text-gray-600 mb-4">
                 Need help with your donation or have questions?
             </p>
-            <p className="text-[#a43a3a] font-semibold">
-                Contact us at: <a href="mailto:donate@racing2learn.org" className="underline">donate@racing2learn.org</a>
-            </p>
-            <p className="text-gray-600 mt-2 mb-10">
-                Tax ID: 12-3456789
+            <p className="text-[#a43a3a] font-semibold mb-10">
+                Contact us at: <a href="mailto:Racing2learn@gmail.com" className="underline">Racing2learn@gmail.com</a>
             </p>
             </div>
         </div>
