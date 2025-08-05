@@ -17,7 +17,7 @@ const DonatePage = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
                 <div className="flex items-center justify-center mb-6">
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-white shadow-md mr-4 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100 shadow-lg mr-4 flex items-center justify-center">
                         <img 
                         src="/PaypalLogo.png" 
                         alt="PayPal Logo" 
