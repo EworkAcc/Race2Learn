@@ -25,7 +25,7 @@ const AboutPage = () => {
             </div>
         </div>
 
-        <div className="bg-gray-900 text-white">
+        <div className="bg-[#a43a3a] text-white">
             <div className="py-16">
             <div className="max-w-6xl mx-auto px-8">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -47,7 +47,7 @@ const AboutPage = () => {
             </div>
             </div>
 
-            <div className="py-16 bg-gray-800">
+            <div className="py-16 bg-[#773232]">
             <div className="max-w-6xl mx-auto px-8">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1 flex justify-center">
@@ -60,7 +60,7 @@ const AboutPage = () => {
                     />
                 </div>
                 <div className="order-1 md:order-2">
-                    <p className="text-lg leading-relaxed mb-6">
+                    <p className="text-lg leading-relaxed mb-6]">
                     Our founder has been deeply involved in RC and automobiles for over 40 years, having started with RC cars at a young age. That early interest in building and experimenting with technology sparked a lifelong passion for engineering and innovation, eventually leading to a successful career in the tech industry.   RODS
                     </p>
                 </div>
@@ -68,7 +68,7 @@ const AboutPage = () => {
             </div>
             </div>
 
-            <div className="py-16 bg-gray-900">
+            <div className="py-16 bg-[#a43a3a]">
             <div className="max-w-6xl mx-auto px-8">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -88,7 +88,7 @@ const AboutPage = () => {
             </div>
             </div>
 
-            <div className="py-16 bg-gray-800">
+            <div className="py-16 bg-[#773232]">
             <div className="max-w-6xl mx-auto px-8">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                 <Image 
