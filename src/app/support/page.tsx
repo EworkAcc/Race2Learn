@@ -54,7 +54,9 @@ const DonatePage = () => {
                 </div>
 
                 <button className="w-full bg-[#a43a3a] text-white py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Select Plan
+                    <Link href="https://www.paypal.com/donate?hosted_button_id=FSS7Q69MTGNKL">
+                    Select Plan
+                    </Link>
                 </button>
             </div>
 

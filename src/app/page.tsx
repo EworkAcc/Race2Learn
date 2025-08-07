@@ -80,19 +80,19 @@ const HomePage = () => {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Customizable rewards campaigns
+                  Experiencing RC vehicles hands-on
                 </li>
                 <li className="flex items-center text-gray-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Zero annual fees on student cards
+                  Learning about engineering and mechanics
                 </li>
                 <li className="flex items-center text-gray-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Advanced spending features with machine learning
+                  Developing problem solving skills
                 </li>
                 <li className="flex items-center text-gray-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Exclusive savings discounts and offers
+                  Building and customizing RC cars
                 </li>
               </ul>
               <Link href="/projects">
