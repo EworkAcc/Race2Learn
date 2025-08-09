@@ -1,0 +1,44 @@
+name: Update YouTube Data
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Start API in background
+        run: |
+          npm run dev &  
+          sleep 5           
+
+      - name: Call local API
+        run: |
+          response=$(curl -s -w "%{http_code}" -X POST "http://localhost:3000/api/youtube/update-database" \
+            -H "Content-Type: application/json" \
+            -d '{"secret": "YOUR_SECRET"}')
+
+          http_code="${response: -3}"
+          body="${response%???}"
+
+          echo "HTTP Status: $http_code"
+          echo "Response: $body"
+
+          if [ "$http_code" != "200" ]; then
+            echo "❌ Update failed with status $http_code"
+            exit 1
+          else
+            echo "✅ YouTube data updated successfully"
+          fi
