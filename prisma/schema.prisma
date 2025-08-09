@@ -1,0 +1,44 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+model Video {
+    id          String   @id @default(auto()) @map("_id") @db.ObjectId
+    videoId     String   @unique
+    title       String
+    description String
+    url         String
+    thumbnail   String
+    publishedAt DateTime
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    @@map("videos")
+}
+
+model ChannelStats {
+    id                String   @id @default(auto()) @map("_id") @db.ObjectId
+    subscriberCount   String
+    viewCount         String
+    videoCount        String
+    channelCreatedDate String
+    lastUpdated       DateTime @default(now())
+    createdAt         DateTime @default(now())
+    updatedAt         DateTime @updatedAt
+
+    @@map("channelstats")
+}
+
+model CronLog {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    status    String   // "success" or "error"
+    message   String?
+    executedAt DateTime @default(now())
+
+    @@map("cronlogs")
+}
