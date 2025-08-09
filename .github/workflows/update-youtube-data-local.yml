@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DATABASE_URL: "mongodb+srv://eworktao:AV0rRICQCZ58iqSh@cluster0.yy6duaa.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=Cluster0"
-      YOUTUBE_API_KEY: "AIzaSyCuAeX0f5i3WGiSk2a218w0gWVzAXS4j_k"
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       YOUTUBE_CHANNEL_ID: "UCv2ojoorzg1QNgnZyCLWxJA"
       YOUTUBE_CHANNEL_HANDLE: "@Racing2Learn"
-      CRON_SECRET: "XCeA1D9264JCAQTLmuYraBu34pRnsQVh5mCbFmmGLMU="
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
       SITE_URL: "http://localhost:3000"
 
     steps:

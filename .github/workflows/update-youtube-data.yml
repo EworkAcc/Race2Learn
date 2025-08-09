@@ -2,8 +2,8 @@ name: Update YouTube Data (Production)
 
 on:
   schedule:
-    - cron: "0 14 * * *" # 6 AM PST = 14:00 UTC
-  workflow_dispatch: # allow manual runs too
+    - cron: "0 14 * * *" 
+  workflow_dispatch: 
 
 jobs:
   update-data:
