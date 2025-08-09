@@ -7,11 +7,19 @@ jobs:
   update-data:
     runs-on: ubuntu-latest
 
+    env:
+      DATABASE_URL: "mongodb+srv://eworktao:AV0rRICQCZ58iqSh@cluster0.yy6duaa.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=Cluster0"
+      YOUTUBE_API_KEY: "AIzaSyCuAeX0f5i3WGiSk2a218w0gWVzAXS4j_k"
+      YOUTUBE_CHANNEL_ID: "UCv2ojoorzg1QNgnZyCLWxJA"
+      YOUTUBE_CHANNEL_HANDLE: "@Racing2Learn"
+      CRON_SECRET: "XCeA1D9264JCAQTLmuYraBu34pRnsQVh5mCbFmmGLMU="
+      SITE_URL: "http://localhost:3000"
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up Node
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -19,16 +27,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Start API in background
+      - name: Push Prisma schema
+        run: npx prisma db push
+
+      - name: Start API server
         run: |
           npm run dev &  
-          sleep 5           
+          sleep 10         
 
       - name: Call local API
         run: |
           response=$(curl -s -w "%{http_code}" -X POST "http://localhost:3000/api/youtube/update-database" \
             -H "Content-Type: application/json" \
-            -d '{"secret": "YOUR_SECRET"}')
+            -d "{\"secret\": \"${CRON_SECRET}\"}")
 
           http_code="${response: -3}"
           body="${response%???}"
