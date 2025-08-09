@@ -1,0 +1,55 @@
+name: Update YouTube Data
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      YOUTUBE_CHANNEL_ID: "UCv2ojoorzg1QNgnZyCLWxJA"
+      YOUTUBE_CHANNEL_HANDLE: "@Racing2Learn"
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
+      SITE_URL: "http://localhost:3000"
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Push Prisma schema
+        run: npx prisma db push
+
+      - name: Start API server
+        run: |
+          npm run dev &  
+          sleep 10         
+
+      - name: Call local API
+        run: |
+          response=$(curl -s -w "%{http_code}" -X POST "http://localhost:3000/api/youtube/update-database" \
+            -H "Content-Type: application/json" \
+            -d "{\"secret\": \"${CRON_SECRET}\"}")
+
+          http_code="${response: -3}"
+          body="${response%???}"
+
+          echo "HTTP Status: $http_code"
+          echo "Response: $body"
+
+          if [ "$http_code" != "200" ]; then
+            echo "❌ Update failed with status $http_code"
+            exit 1
+          else
+            echo "✅ YouTube data updated successfully"
+          fi
