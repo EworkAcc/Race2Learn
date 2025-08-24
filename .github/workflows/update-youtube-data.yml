@@ -11,7 +11,7 @@ jobs:
 
     env:
       CRON_SECRET: ${{ secrets.CRON_SECRET }} 
-      SITE_URL: "https://https://race2-learn.vercel.app/"
+      SITE_URL: "https://race2-learn.vercel.app"
 
     steps:
       - name: Call production API
