@@ -31,7 +31,7 @@ const AboutPage = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <p className="text-lg leading-relaxed mb-6">
-                    We are a nonprofit organization dedicated to inspiring youth through hands-on learning in science, technology, engineering, math (STEM), and life skills—using radio-controlled (RC) vehicles, robotics, and full-size car projects as engaging educational platforms.  
+                    We are a nonprofit organization dedicated to inspiring youth through hands-on learning in science, technology, engineering, math (STEM), and life skills—using radio-controlled (RC) vehicles, robotics, and full-size car projects as engaging educational platforms. 
                     </p>
                 </div>
                 <div className="flex justify-center">
@@ -61,7 +61,7 @@ const AboutPage = () => {
                 </div>
                 <div className="order-1 md:order-2">
                     <p className="text-lg leading-relaxed mb-6]">
-                    Our founder has been deeply involved in RC and automobiles for over 40 years, having started with RC cars at a young age. That early interest in building and experimenting with technology sparked a lifelong passion for engineering and innovation, eventually leading to a successful career in the tech industry.   RODS
+                    Our founder has been deeply involved in RC and automobiles for over 40 years, having started with RC cars at a young age. That early interest in building and experimenting with technology sparked a lifelong passion for engineering and innovation, eventually leading to a successful career in the tech industry.  RODS
                     </p>
                 </div>
                 </div>
@@ -73,7 +73,7 @@ const AboutPage = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <p className="text-lg leading-relaxed mb-6">
-                    Now, as a parent, he sees firsthand how RC and robotics make learning exciting—turning everyday spaces into creative classrooms where kids build, explore, and connect. Every outing with RC vehicles draws a crowd, encouraging curiosity, conversation, and community.                      </p>
+                    Now, as a parent, he sees firsthand how RC and robotics make learning exciting—turning everyday spaces into creative classrooms where kids build, explore, and connect. Every outing with RC vehicles draws a crowd, encouraging curiosity, conversation, and community.                     </p>
                 </div>
                 <div className="flex justify-center">
                     <Image 
@@ -100,7 +100,7 @@ const AboutPage = () => {
                 />
                 <div className="order-1 md:order-2">
                     <p className="text-lg leading-relaxed mb-6">
-                    We are expanding our impact by adding full-size car projects and robotics into our programs, giving youth real-world exposure to mechanics, electronics, and problem-solving. We currently maintain a growing fleet of RC vehicles and robotics kits and are actively working to expand and repair them so we can reach even more children locally and, eventually, in communities across the country and around the world.  
+                    We are expanding our impact by adding full-size car projects and robotics into our programs, giving youth real-world exposure to mechanics, electronics, and problem-solving. We currently maintain a growing fleet of RC vehicles and robotics kits and are actively working to expand and repair them so we can reach even more children locally and, eventually, in communities across the country and around the world. 
                     </p>
                 </div>
                 </div>

@@ -38,7 +38,7 @@ const Navbar = () => {
                                 <a
                                 key={item.name}
                                 href={item.href}
-                                className="text-white hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out transform hover:scale-105"
+                                className="text-white hover:bg-white hover:text-[#a43a3a] hover:font-bold hover:bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out transform hover:scale-105"
                                 >
                                 {item.name}
                                 </a>
@@ -75,7 +75,7 @@ const Navbar = () => {
                         <a
                         key={item.name}
                         href={item.href}
-                        className="text-white hover:bg-white hover:bg-opacity-20 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300"
+                        className="text-white hover:bg-white hover:text-[#a43a3a] hover:bg-opacity-20 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300"
                         onClick={() => setIsMenuOpen(false)}
                         >
                         {item.name}
