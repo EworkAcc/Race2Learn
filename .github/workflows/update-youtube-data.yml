@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Call production API
         run: |
+          echo "Calling: $SITE_URL/api/youtube/update-database"
+          echo "CRON_SECRET configured: $([ -n "$CRON_SECRET" ] && echo 'Yes' || echo 'No')"
+          
           response=$(curl -s -w "%{http_code}" -X POST "$SITE_URL/api/youtube/update-database" \
             -H "Content-Type: application/json" \
             -d "{\"secret\": \"${CRON_SECRET}\"}")
@@ -24,10 +27,23 @@ jobs:
           body="${response%???}"
 
           echo "HTTP Status: $http_code"
-          echo "Response: $body"
+          echo "Response Body: '$body'"
+          
+          # Try to parse and display error details if it's JSON
+          if command -v jq >/dev/null 2>&1; then
+            echo "Parsed error (if JSON):"
+            echo "$body" | jq . 2>/dev/null || echo "Not valid JSON or jq not available"
+          fi
 
           if [ "$http_code" != "200" ]; then
             echo "❌ Update failed with status $http_code"
+            echo "Common causes for 500 errors in your API:"
+            echo "1. Database connection issues (DATABASE_URL)"
+            echo "2. YouTube API authentication (YOUTUBE_API_KEY)"
+            echo "3. Missing environment variables in Vercel"
+            echo "4. Prisma schema sync issues"
+            echo ""
+            echo "Check your Vercel function logs at: https://vercel.com/dashboard"
             exit 1
           else
             echo "✅ YouTube data updated successfully"
