@@ -14,27 +14,9 @@ jobs:
       SITE_URL: "https://race2-learn.vercel.app"
 
     steps:
-      - name: Test basic connectivity
-        run: |
-          echo "Testing basic site connectivity..."
-          curl -s -o /dev/null -w "HTTP Status: %{http_code}, Time: %{time_total}s\n" "$SITE_URL"
-
-      - name: Test API endpoint with GET (should return 405)
-        run: |
-          echo "Testing API endpoint accessibility..."
-          response=$(curl -s -w "%{http_code}" -X GET "$SITE_URL/api/youtube/update-database")
-          http_code="${response: -3}"
-          body="${response%???}"
-          echo "GET request - HTTP Status: $http_code"
-          echo "GET request - Response: '$body'"
-
       - name: Call production API
         run: |
-          echo "Calling: $SITE_URL/api/youtube/update-database"
-          echo "CRON_SECRET configured: $([ -n "$CRON_SECRET" ] && echo 'Yes' || echo 'No')"
-          
-          # Add timeout and more verbose curl options
-          response=$(curl -s -w "%{http_code}" --max-time 30 -X POST "$SITE_URL/api/youtube/update-database" \
+          response=$(curl -s -w "%{http_code}" -X POST "$SITE_URL/api/youtube/update-database" \
             -H "Content-Type: application/json" \
             -d "{\"secret\": \"${CRON_SECRET}\"}")
 
@@ -42,27 +24,10 @@ jobs:
           body="${response%???}"
 
           echo "HTTP Status: $http_code"
-          echo "Response Body: '$body'"
-          echo "Response Length: ${#body} characters"
-          
-          # Try to parse and display error details if it's JSON
-          if command -v jq >/dev/null 2>&1 && [ -n "$body" ]; then
-            echo "Parsed error (if JSON):"
-            echo "$body" | jq . 2>/dev/null || echo "Not valid JSON"
-          fi
+          echo "Response: $body"
 
           if [ "$http_code" != "200" ]; then
             echo "❌ Update failed with status $http_code"
-            if [ -z "$body" ]; then
-              echo "⚠️  Empty response body indicates a critical server error:"
-              echo "1. Function timeout (>10s on Hobby, >60s on Pro)"
-              echo "2. Out of memory error"
-              echo "3. Import/compilation failure"
-              echo "4. Immediate crash on function startup"
-              echo "5. Cold start timeout"
-            fi
-            echo ""
-            echo "Check your Vercel function logs at: https://vercel.com/dashboard"
             exit 1
           else
             echo "✅ YouTube data updated successfully"
