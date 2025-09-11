@@ -58,7 +58,7 @@ const CustFooter = () => {
                 
                 <div className="border-t border-gray-700 mt-12 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
-                    <p>© 2025 Race2L. All rights reserved.</p>
+                    <p>© 2025 Race2Learn All rights reserved.</p>
                     {/*
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" className="hover:text-white">Privacy Policy</a>
