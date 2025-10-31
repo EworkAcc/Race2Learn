@@ -8,20 +8,19 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <NavBar />
-      <div 
-        className="relative h-screen bg-cover bg-left bg-no-repeat h-screen w-full bg-[url('../../public/Chasis.jpg')]"
+      <div
+        className="relative h-screen bg-cover bg-right left-center bg-no-repeat h-screen w-relative bg-[url('../../public/Chasis.jpg')]"
       >
-        <div className="absolute inset-0 bg-opacity-40"></div>
-        <div className="relative z-10 flex items-center justify-center h-full px-4">
+        <div className="flex items-center justify-center h-full px-4">
           <div className="text-center max-w-4xl">
-            <p className="text-xl md:text-2xl text-black text-extrabold mb-8 max-w-2xl mt-[500px] mr-[00px]">
+            <p className="text-xl md:text-2xl text-black text-extrabold mb-8 max-w-2xl mt-[80%] mr-[00px]">
               A Nonprofit That Gets Kids Excited About Math and Science
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-100 hover:text-[#a43a3a] transition-all duration-300 transform hover:scale-105">
+              <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-100 hover:text-[#a43a3a] transition-all duration-300 transform">
                 Explore
               </button>
-              <button className="border-2 border-black text-black px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#a43a3a] hover:border-white transition-all duration-300 transform hover:scale-105">
+              <button className="border-2 border-black text-black px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#a43a3a] hover:border-white transition-all duration-300 transform ">
                 Donate
               </button>
             </div>
