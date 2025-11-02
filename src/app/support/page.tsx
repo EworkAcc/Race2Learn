@@ -14,7 +14,7 @@ const DonatePage = () => {
             <p className="text-xl text-gray-600">Pick a site to support us from</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
                 <div className="flex items-center justify-center mb-6 mt-4">
                     <div className="w-16 h-16 mb-1 rounded-full overflow-hidden bg-gray-100 shadow-lg mr-4 flex items-center justify-center">
@@ -110,6 +110,55 @@ const DonatePage = () => {
                     Select Plan
                     </button>
                 </Link>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                <div className="flex items-center justify-center mb-6 mt-4">
+                    <div className="w-16 h-16 mb-1 rounded-full overflow-hidden bg-gray-100 shadow-lg mr-4 flex items-center justify-center">
+                        <img 
+                        src="/Zeffy.png" 
+                        alt="Zeffy Logo" 
+                        className="h-12 w-12 object-contain"
+                        />
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-800">Zeffy</h2>
+                </div>
+
+                <div className="mb-8">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Features:</h3>
+                <ul className="space-y-3">
+                    <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">Fast and secure donation by accepted worldwide</span>
+                    </li>
+                    <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">Use your Zeffy balance, credit, or debit cards</span>
+                    </li>
+                    <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">One-time or mothly to weekly payments</span>
+                    </li>
+                    <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">Secure payment with Zeffy Buyer Protection</span>
+                    </li>
+                    <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">Tax-deductible receipts provided after donation</span>
+                    </li>
+                    <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">Visible financial goals</span>
+                    </li>
+                </ul>
+                </div>
+
+                <button className="w-full bg-[#a43a3a] text-white py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <Link href="https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-17983">
+                    Select Plan
+                    </Link>
+                </button>
             </div>
             </div>
 

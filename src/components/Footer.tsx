@@ -7,7 +7,7 @@ import facebook from "../../public/facebook.png";
 import youtube from "../../public/youtube.png";
 import PatreonLogo from "../../public/PatreonLogo.png";
 import PaypalLogo from "../../public/PaypalLogo.png";
-
+import Zeffy from "../../public/Zeffy.png"
 const CustFooter = () => {
     return (
         <footer className="bg-gray-900 text-white py-16">
@@ -38,7 +38,7 @@ const CustFooter = () => {
                     </div>
                     <div>
                         <h4 className="text-lg font-semibold mb-4">Support Us</h4>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-3 gap-4">
                             
                             <div className="grid grid-rows-2 gap-2">
                                 <Link href="https://www.patreon.com/racing2learn"><div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"><Image src={PatreonLogo} alt="Patreon" className="w-12 h-12"/></div></Link>
@@ -48,7 +48,10 @@ const CustFooter = () => {
                                 <Link href="https://www.paypal.com/donate?hosted_button_id=FSS7Q69MTGNKL"><div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"><Image src={PaypalLogo} alt="PayPal" className="w-12 h-12 bg-gray-200 rounded-full"/></div></Link>
                                 <Link href="https://www.paypal.com/donate?hosted_button_id=FSS7Q69MTGNKL"><div className="text-gray-400 ml-2 hover:text-white">Paypal</div></Link>
                             </div>
-                            
+                            <div className="grid grid-rows-2 gap-2">
+                                <Link href="https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-17983"><div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"><Image src={Zeffy} alt="Zeffy" className="w-12 h-12 bg-gray-200 rounded-full"/></div></Link>
+                                <Link href="https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-17983"><div className="text-gray-400 ml-2 hover:text-white">Zeffy</div></Link>
+                            </div>
                         </div>
                         <div className="text-gray-400">
                             Your support helps us further improve and create educational content. 
