@@ -12,15 +12,15 @@ const HomePage = () => {
         className="relative h-screen bg-cover bg-right left-center bg-no-repeat h-screen w-relative bg-[url('../../public/Chasis.jpg')]"
       >
         <div className="flex items-center justify-center h-full px-4">
-          <div className="text-center max-w-4xl">
-            <p className="text-xl md:text-2xl text-black text-extrabold mb-8 max-w-2xl mt-[80%] mr-[00px]">
+          <div className="text-center max-w-3xl mt-[110%] sm:mt-[80%] md:mt-[60%] lg:mt-[25%]">
+            <p className="text-xl md:text-2xl sm:text-sm text-black text-extrabold mb-8 max-w-2xl">
               A Nonprofit That Gets Kids Excited About Math and Science
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-100 hover:text-[#a43a3a] transition-all duration-300 transform">
+              <button className="text-bg-black text-white border-2 border-white sm:px-[20%] h-[5vh] md:px-[7%] lg:5%] rounded-full font-semibold hover:bg-gray-100 hover:text-[#a43a3a] transition-all duration-300 transform">
                 Explore
               </button>
-              <button className="border-2 border-black text-black px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#a43a3a] hover:border-white transition-all duration-300 transform ">
+              <button className="border-2 border-black text-black sm:px-[20%] h-[5vh] md:px-[7%] lg:px-[5%] rounded-full font-semibold hover:bg-white hover:text-[#a43a3a] hover:border-white transition-all duration-300 transform ">
                 Donate
               </button>
             </div>
