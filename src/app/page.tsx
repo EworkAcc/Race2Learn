@@ -9,22 +9,17 @@ const HomePage = () => {
     <div className="min-h-screen">
       <NavBar />
       <div
-        className="relative h-screen bg-cover bg-right left-center bg-no-repeat h-screen w-relative bg-[url('../../public/Chasis.jpg')]"
+        className="relative bg-cover bg-right bg-no-repeat w-screen min-h-[clamp(60vh,75vh,90vh)] bg-[url('../../public/Chasis.jpg')]"
       >
         <div className="flex items-center justify-center h-full px-4">
-          <div className="text-center max-w-3xl mt-[110%] sm:mt-[80%] md:mt-[60%] lg:mt-[25%]">
-            <p className="text-xl md:text-2xl sm:text-sm text-black text-extrabold mb-8 max-w-2xl">
-              A Nonprofit That Gets Kids Excited About Math and Science
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="text-bg-black text-white border-2 border-white sm:px-[20%] h-[5vh] md:px-[7%] lg:5%] rounded-full font-semibold hover:bg-gray-100 hover:text-[#a43a3a] transition-all duration-300 transform">
-                Explore
-              </button>
-              <button className="border-2 border-black text-black sm:px-[20%] h-[5vh] md:px-[7%] lg:px-[5%] rounded-full font-semibold hover:bg-white hover:text-[#a43a3a] hover:border-white transition-all duration-300 transform ">
-                Donate
-              </button>
+          
+          <div className = "absolute right-4 top-3/4 -translate-y-1/2 max-w-[50%] sm:max-w-[35%] max-h-[50%] sm:max-h-[60%] object-contain">
+            <img src="/RC2LLogo.png" alt="" />
+            <div className="text-black text-sm sm:text-base text-center md:text-lg font-semibold leading-none tracking-wide drop-shadow-md">
+              Sparking Curiosity Through STEM Education
             </div>
           </div>
+          
         </div>
       </div>
 

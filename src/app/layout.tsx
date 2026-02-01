@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Race2Learn",
+  title: "Racing2Learn",
   description: "A Nonprofit That Gets Kids Excited About Math and Science",
   icons: {
     icon: "/favicon.svg",
