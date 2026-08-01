@@ -14,7 +14,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Projects', href: '/projects' },
     { name: 'YouTube', href: 'https://www.youtube.com/c/Racing2Learn' },
-    { name: 'About Us', href: '/about' },
+    { name: 'About Us', href: '/about' }
   ];
 
     return (
@@ -81,7 +81,7 @@ const Navbar = () => {
                         </a>
                     ))}
                     <a
-                        href="#support"
+                        href="/support"
                         className="bg-white text-[#a43a3a] hover:bg-gray-100 block px-4 py-3 rounded-xl text-base font-bold transition-all duration-300 mx-2 mt-3 text-center shadow-lg"
                         onClick={() => setIsMenuOpen(false)}
                     >
