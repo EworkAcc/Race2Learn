@@ -4,7 +4,7 @@ import { stripe } from '@/lib/stripe';
 import { redirect } from 'next/navigation';
 
 const createCheckoutSession = async (priceId: string) => {
-  const origin = process.env.site_URL || 'http://localhost:3000';
+  const origin = process.env.site_URL; 
 
   try {
     const session = await stripe.checkout.sessions.create({
