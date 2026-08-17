@@ -34,6 +34,7 @@ const CustFooter = () => {
                             <li><a href="https://www.youtube.com/@Racing2Learn" className="hover:text-white">Youtube</a></li>
                             <li><a href="/about" className="hover:text-white">About Us</a></li>
                             <li><a href="/support" className="hover:text-white">Support Us</a></li>
+                            <li><a href="/store" className="hover:text-white">Store</a></li>
                         </ul>
                     </div>
                     <div>

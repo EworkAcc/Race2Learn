@@ -3,8 +3,10 @@ import { Lightbulb, Users, BookOpen, Target, Play } from 'lucide-react';
 import NavBar from '../components/NavBar';
 import Link from 'next/link';
 import CustFooter from '@/components/Footer';
+import CheckoutButton from '@/components/CheckoutButton';
 
 const HomePage = () => {
+  const livePriceId = 'price_1U5BNi7wSjiyxmK5gT9E8mLd';
   return (
     <div className="min-h-screen">
       <NavBar />

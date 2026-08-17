@@ -14,7 +14,8 @@ const Navbar = () => {
   const navItems = [
     { name: 'Projects', href: '/projects' },
     { name: 'YouTube', href: 'https://www.youtube.com/c/Racing2Learn' },
-    { name: 'About Us', href: '/about' }
+    { name: 'About Us', href: '/about' },
+    { name: 'Store', href: '/store'}
   ];
 
     return (
@@ -32,7 +33,7 @@ const Navbar = () => {
                         </Link>
                     </div>
                     <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-4">
+                        <div className="ml-10 flex items-baseline space-x-5">
                             {navItems.map((item) => (
                                 <a
                                 key={item.name}
